@@ -7,10 +7,10 @@ export function Footer() {
                 
                 <div className="flex items-center gap-4 mt-4">
                     <a href="https://wa.me/5511947057061" target="_blank" rel="noopener noreferrer">
-                        <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5 cursor-pointer transition-transform hover:brightness-50" />
+                        <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5 cursor-pointer transition duration-300 ease-in-out hover:brightness-50" />
                     </a>
                     <a href="https://instagram.com/torquato.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="/instagram.png" alt="Instagram" className="w-5 h-5 cursor-pointer transition-transform hover:brightness-50" />
+                        <img src="/instagram.png" alt="Instagram" className="w-5 h-5 cursor-pointer transition duration-300 ease-in-out hover:brightness-50" />
                     </a>
                 </div>
                 <p className="font-bold mt-auto">Made by MySelf</p>

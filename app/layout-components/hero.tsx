@@ -21,12 +21,20 @@ export function Hero() {
                     <NavigationMenuItem className="cursor-pointer">
                         <NavigationMenuTrigger className="cursor-pointer">Trabalhos</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <NavigationMenuLink className="cursor-pointer">Link</NavigationMenuLink>
+                            <NavigationMenuLink className="cursor-pointer" href="/photopages/amsterdam">
+                                Amsterdam
+                            </NavigationMenuLink>
+                            <NavigationMenuLink className="cursor-pointer" href="/photopages/london">
+                                London
+                            </NavigationMenuLink>
+                            <NavigationMenuLink className="cursor-pointer" href="/photopages/sbsp">
+                                SBSP
+                            </NavigationMenuLink>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <NavigationMenuLink href="#home">Home</NavigationMenuLink>
+                        <NavigationMenuLink href="/">Home</NavigationMenuLink>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>

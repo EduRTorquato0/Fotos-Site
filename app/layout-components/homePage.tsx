@@ -3,22 +3,33 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator"
 
 
+const photos = [
+    { src: "/recents/IMG_0174.jpg", alt: "Centro de Amsterdã" },
+    { src: "/recents/IMG_1037.jpg", alt: "Ciclista, na Ciclofaixa da Marginal de SP" },
+    { src: "/recents/IMG_0926.jpg", alt: "Igreja em São Bento do Sapucaí" },
+    { src: "/recents/IMG_1026.jpg", alt: "Ponte Estaiada, SP" },
+    { src: "/recents/IMG_0919.jpg", alt: "Eu Registrado pelo olhar da Deborah, São Bento do Sapucaí" },
+]
+
 export default function HomePage() {
 
     return (
 
-        
+
         <main className="bg-gray-50">
 
-   
+
+            <div className="flex flex-col items-center justify-center gap-6 bg-blue-100 mt-2 px-6 py-8 text-2xl md:flex-row md:px-20">
+                <p className="max-w-3xl text-center md:text-center">Você também pode encontrar mais fotos e contratar serviços por meio do meu <a href="https://instagram.com/torquato.jpg" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Instagram</a>.</p>
+            </div>
 
             <h2 className="text-4xl roboto-slab-title justify-center m-10">Mais recentes: </h2>
 
+
             <div className="m-10 grid grid-cols-1 justify-start gap-6 md:grid-cols-2">
-                <Item descricao="Descrição do Item 1" foto="/IMG_0174.jpg" />
-                <Item descricao="Descrição do Item 2" foto="/IMG_0897.jpg" />
-                <Item descricao="Descrição do Item 2" foto="/IMG_0919.jpg" />
-                <Item descricao="Descrição do Item 2" foto="/IMG_0926.jpg" />
+                {photos.map((photo, index) => (
+                    <Item key={index} foto={photo.src} descricao={photo.alt} />
+                ))}
             </div>
 
             <div id="quem-sou" className=" mt-10 flex min-h-80 w-full flex-col items-center justify-start gap-6 bg-amber-100 px-6 py-8 text-2xl md:flex-row md:px-20">
