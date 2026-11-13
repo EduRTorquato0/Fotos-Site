@@ -6,6 +6,7 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import { withBasePath } from "@/lib/site-path"
 
 export function Hero() {
     return (
@@ -21,28 +22,28 @@ export function Hero() {
                     <NavigationMenuItem className="cursor-pointer">
                         <NavigationMenuTrigger className="cursor-pointer">Trabalhos</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <NavigationMenuLink className="cursor-pointer" href="/photopages/amsterdam">
+                            <NavigationMenuLink className="cursor-pointer" href={withBasePath("/photopages/amsterdam/")}>
                                 Amsterdam
                             </NavigationMenuLink>
-                            <NavigationMenuLink className="cursor-pointer" href="/photopages/london">
+                            <NavigationMenuLink className="cursor-pointer" href={withBasePath("/photopages/london/")}>
                                 London
                             </NavigationMenuLink>
-                            <NavigationMenuLink className="cursor-pointer" href="/photopages/sbsp">
+                            <NavigationMenuLink className="cursor-pointer" href={withBasePath("/photopages/sbsp/")}>
                                 SBSP
                             </NavigationMenuLink>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <NavigationMenuLink href="/">Home</NavigationMenuLink>
+                        <NavigationMenuLink href={withBasePath("/")}>Home</NavigationMenuLink>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <NavigationMenuLink href="#contatos">Contatos</NavigationMenuLink>
+                        <NavigationMenuLink href={`${withBasePath("/")}#contatos`}>Contatos</NavigationMenuLink>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <NavigationMenuLink href="#quem-sou">Quem sou</NavigationMenuLink>
+                        <NavigationMenuLink href={`${withBasePath("/")}#quem-sou`}>Quem sou</NavigationMenuLink>
                     </NavigationMenuItem>
 
 

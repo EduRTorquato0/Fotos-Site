@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/site-path"
+
 export function Footer() {
     return (
         <footer id="contatos" className="scroll-mt-25 bg-blue-950 text-white py-4 w-full h-100">
@@ -7,10 +9,10 @@ export function Footer() {
                 
                 <div className="flex items-center gap-4 mt-4">
                     <a href="https://wa.me/5511947057061" target="_blank" rel="noopener noreferrer">
-                        <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5 cursor-pointer transition duration-300 ease-in-out hover:brightness-50" />
+                        <img src={withBasePath("/whatsapp.png")} alt="WhatsApp" className="w-5 h-5 cursor-pointer transition duration-300 ease-in-out hover:brightness-50" />
                     </a>
                     <a href="https://instagram.com/torquato.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="/instagram.png" alt="Instagram" className="w-5 h-5 cursor-pointer transition duration-300 ease-in-out hover:brightness-50" />
+                        <img src={withBasePath("/instagram.png")} alt="Instagram" className="w-5 h-5 cursor-pointer transition duration-300 ease-in-out hover:brightness-50" />
                     </a>
                 </div>
                 <p className="font-bold mt-auto">Made by MySelf</p>

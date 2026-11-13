@@ -1,9 +1,18 @@
 import type { NextConfig } from "next";
 
+const siteBasePath = "/Fotos-Site";
+
 const nextConfig: NextConfig = {
   /* config options here */
   output: "export",
-  basePath: "/Fotos-Site",
+  basePath: siteBasePath,
+  trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: siteBasePath,
+  },
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     rules: {
       "*.css": {

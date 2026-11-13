@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { withBasePath } from "@/lib/site-path"
 import {
     Carousel,
     CarouselContent,
@@ -8,11 +9,11 @@ import {
 } from "@/components/ui/carousel"
 
 const photos = [
-    { src: "/carrousselphotos/IMG_0324.jpg", alt: "Imagem do carrossel 1" },
-    { src: "/carrousselphotos/IMG_0294.jpg", alt: "Imagem do carrossel 2" },
-    { src: "/carrousselphotos/IMG_0875.jpg", alt: "Imagem do carrossel 3" },
-    { src: "/carrousselphotos/IMG_0897.jpg", alt: "Imagem do carrossel 4" },
-    { src: "/carrousselphotos/IMG_0919.jpg", alt: "Imagem do carrossel 5" },
+    { src: withBasePath("/carrousselphotos/IMG_0324.jpg"), alt: "Imagem do carrossel 1" },
+    { src: withBasePath("/carrousselphotos/IMG_0294.jpg"), alt: "Imagem do carrossel 2" },
+    { src: withBasePath("/carrousselphotos/IMG_0875.jpg"), alt: "Imagem do carrossel 3" },
+    { src: withBasePath("/carrousselphotos/IMG_0897.jpg"), alt: "Imagem do carrossel 4" },
+    { src: withBasePath("/carrousselphotos/IMG_0919.jpg"), alt: "Imagem do carrossel 5" },
 ]
 
 export function Carroussel() {
